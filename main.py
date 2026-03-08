@@ -1,16 +1,17 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from datetime import date
 
 app = FastAPI () 
 
-#medelo de datos Reserva
+#modelo de datos Reserva
 
 class Reserva(BaseModel):
     id_reserva: int
     id_sala: int
     id_usuario: int
     fecha: str
-    hora_inicio: str
+    hora_inicio: date
     hora_fin: str
     personas: int
     estado: str

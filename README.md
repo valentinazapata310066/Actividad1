@@ -36,7 +36,6 @@ uvicorn main:app --reload
 
 - **URL Base:** http://127.0.0.1:8000
 - **Documentación Interactiva:** http://127.0.0.1:8000/docs
-- **Documentación Alternativa:** http://127.0.0.1:8000/redoc
 
 ## Ejemplos de Uso de los Endpoints
 
@@ -44,7 +43,7 @@ uvicorn main:app --reload
 
 **Solicitud:**
 ```bash
-curl -X GET "http://127.0.0.1:8000/"
+curl -X GET "http://127.0.0.1:8000/docs#/default/obtener_reservas_reservas_get"
 ```
 
 **Respuesta:**
@@ -66,7 +65,7 @@ curl -X GET "http://127.0.0.1:8000/"
 
 **Solicitud:**
 ```bash
-curl -X POST "http://127.0.0.1:8000/reservas" \
+curl -X POST "http://127.0.0.1:8000/docs#/default/crear_reservas_reservas_post" \
   -H "Content-Type: application/json" \
   -d '{
     "id_reserva": 1,
@@ -148,7 +147,7 @@ curl -X GET "http://127.0.0.1:8000/reservas"
 
 **Solicitud:**
 ```bash
-curl -X GET "http://127.0.0.1:8000/reservas/1"
+curl -X GET "http://127.0.0.1:8000/docs"
 ```
 
 **Respuesta Exitosa:**
@@ -214,7 +213,7 @@ Si se envían datos inválidos, la API devuelve un error 422 con detalles de val
 
 ## Autor
 
-**Juan Carlos Morales Guerra**
+**Juan Diego Perez Perez**
 **Valentina Zapata Alvarez**
 
 ## Versión
